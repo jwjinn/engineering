@@ -1,4 +1,6 @@
 {%load static %}
+{%load plotly_dash %}
+
 
 <!DOCTYPE HTML>
 <!--
@@ -12,6 +14,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link href = "{% static 'css/main.css' %}" rel = "stylesheet"/>
+		<link rel="stylesheet" href="{% static 'css/add.css' %}">
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -26,7 +29,7 @@
 						<nav id="nav">
 							<ul>
                                 <li><a href="{% url 'index' %}">Home</a></li>
-                                <li><a href="{% url 'map' %}">map</a></li>
+								<li><a href="{% url 'map' %}">map</a></li>
                                 <li><a href="{% url 'academy' %}">학원</a></li>
 								<li><a href="{% url 'real_estate' %}">부동산</a></li>
 								<li><a href="{% url 'school' %}">학교</a></li>
@@ -42,75 +45,60 @@
 				<section class="wrapper style1">
 					<div class="container">
 						<div class="row gtr-200">
-							<div class="col-8 col-12-narrower">
-								<div id="content">
+
+								<div class='school_content', id="content">
 
 									<!-- Content -->
 
 										<article>
 											<header>
-												<h2>학교</h2>
-												<p>Sidebar on the right, content on the left.</p>
+												<h2 id = a>서울시 학교 현황</h2>
+												<p>서울시 초중고 학교 현황, 위치</p>
+												<div>{% plotly_app name="school_map" ratio=0.7 %}</div>
 											</header>
 
-                                            <span class="image featured"><img src="{% static 'images/banner.jpg' %}" alt="" /></span>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam lorem ipsum dolor sit amet nullam.</p>
+											<div>
+												<h2 id = b>자치구별 학교수</h2>
+												<p>서울시의 자치구별 초중고 학교수</p>
+												<div>{% plotly_app name="school_num" ratio=0.6 %}</div>
+											</div>
 
-											<h3>And Yet Another Subheading</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
-											justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
-											ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
-											vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-											Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-											rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
-											Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
-											Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum commodo luctus.</p>
+											<header>
+												<h2 id = c>자치구별 학생수, 교사수, 과밀학급수</h2>
+												<p>자치구별 총 학생수, 총 교사수, 과밀학급수 비교</p>
+												<h6>*과밀학급 : 학급당 학생수가 28명이 넘는 학급</h6>
+												<div>{% plotly_app name="student_teacher_class" ratio=0.6 %}</div>
+											</header>
 
-											<p>Phasellus odio risus, faucibus et viverra vitae, eleifend ac purus. Praesent mattis, enim
-											quis hendrerit porttitor, sapien tortor viverra magna, sit amet rhoncus nisl lacus nec arcu.
-											Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt. Mauris dolor urna,
-											fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium.
-											Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
-											Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.</p>
-										</article>
+											<header>
+												<h2 id = d>자치구별 학생수 영향요인 시각화</h2>
+												<p>서울시의 자치구별 평균 학생수를 인구수, 평균 아파트 매매가, 버스정류장수, 지하철역수, 학원수와 비교</p>
+												<div>{% plotly_app name="school_heatmap" ratio=0.7 %}</div>
+											</header>
+
+
 
 								</div>
-							</div>
-							<div class="col-4 col-12-narrower">
+
+
 								<div id="sidebar">
 
 									<!-- Sidebar -->
 
-										<section>
-											<h3>Just a Subheading</h3>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis et nisi etiam.</p>
-											<footer>
-												<a href="#" class="button">Continue Reading</a>
-											</footer>
-										</section>
 
-										<section>
-											<h3>Another Subheading</h3>
+										<section id = 'fix'>
+											<h3><a href="#">학교</h3>
 											<ul class="links">
-												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-												<li><a href="#">Ornare in hendrerit in lectus</a></li>
-												<li><a href="#">Semper mod quis eget mi dolore</a></li>
-												<li><a href="#">Consequat etiam lorem phasellus</a></li>
-												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-												<li><a href="#">Semper mod quisturpis nisi</a></li>
+												<li><a href="#a">> 서울시 학교 현황</a></li>
+												<li><a href="#b">> 자치구별 학교수</a></li>
+												<li><a href="#c">> 자치구별 학생수, 교사수, 과밀학급수</a></li>
+												<li><a href="#d">> 자치구별 학생수 영향요인 시각화</a></li>
 											</ul>
-											<footer>
-												<a href="#" class="button">More Random Links</a>
-											</footer>
+
 										</section>
 
 								</div>
-							</div>
+
 						</div>
 					</div>
 				</section>
