@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-from home.dash_apps import app1, app3
+from home.dash_apps import app1, app3, app4, app5, app6, app7
 
 urlpatterns = [
     path('', views.index, name = 'index'),
