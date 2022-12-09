@@ -34,6 +34,7 @@ fig03 = px.bar(df02, x='gugun', y="middle", text_auto='.2s')
 fig04 = px.bar(df02, x='gugun', y="high", text_auto='.2s')
 
 
+
 # app layout
 app.layout = html.Div([
     dcc.Tabs([

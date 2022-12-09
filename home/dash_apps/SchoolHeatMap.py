@@ -125,17 +125,17 @@ fig.add_trace(go.Choroplethmapbox(
 
 # graph layout
 fig.update_layout(mapbox1=dict(style="carto-positron",
-                  zoom=8.5, center = {"lat": 37.5453029, "lon": 126.9894348}, accesstoken = token),
+                  zoom=8.2, center = {"lat": 37.5453029, "lon": 126.9894348}, accesstoken = token),
                   mapbox2=dict(style="carto-positron",
-                               zoom=8.5, center={"lat": 37.5453029, "lon": 126.9894348}, accesstoken=token),
+                               zoom=8.2, center={"lat": 37.5453029, "lon": 126.9894348}, accesstoken=token),
                   mapbox3=dict(style="carto-positron",
-                            zoom=8.5, center = {"lat": 37.5453029, "lon": 126.9894348}, accesstoken = token),
+                            zoom=8.2, center = {"lat": 37.5453029, "lon": 126.9894348}, accesstoken = token),
                   mapbox4=dict(style="carto-positron",
-                               zoom=8.5, center={"lat": 37.5453029, "lon": 126.9894348}, accesstoken=token),
+                               zoom=8.2, center={"lat": 37.5453029, "lon": 126.9894348}, accesstoken=token),
                   mapbox5=dict(style="carto-positron",
-                            zoom=8.5, center = {"lat": 37.5453029, "lon": 126.9894348}, accesstoken = token),
+                            zoom=8.2, center = {"lat": 37.5453029, "lon": 126.9894348}, accesstoken = token),
                   mapbox6=dict(style="carto-positron",
-                            zoom=8.5, center = {"lat": 37.5453029, "lon": 126.9894348}, accesstoken = token),
+                            zoom=8.2, center = {"lat": 37.5453029, "lon": 126.9894348}, accesstoken = token),
                   margin={"r":0,"t":20,"l":0,"b":0},
                   )
 
@@ -148,7 +148,6 @@ app.layout = html.Div(
     dcc.Graph(
         id='example-graph',
         figure=fig,
-        style={'width': '1000px', 'height' : '650px'},
     )
 ])
 

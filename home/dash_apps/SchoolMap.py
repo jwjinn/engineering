@@ -4,7 +4,7 @@ from django_plotly_dash import DjangoDash
 import plotly.express as px
 from home.models import *
 from mongo.mongoConnect import *
-from config import mapbox
+from config import mapbox, MongoDB_config
 
 # DjangoDash app 이름
 app = DjangoDash('school_map')
@@ -14,7 +14,7 @@ schools = School.objects.all().values()
 school = pd.DataFrame(schools)
 
 # 위도, 경도
-mongo = MongoCon('34.64.138.45', 27017, 1000)
+mongo = MongoCon(MongoDB_config['host'], MongoDB_config['port'], 1000)
 k = mongo.getAllSchool()
 
 name = []
@@ -45,12 +45,12 @@ fig.update_layout(
 
 # app layout
 app.layout = html.Div(
-    # style={"background-color":"red", "overflow": "auto"},
+
     children=[
     dcc.Graph(
         id='example-graph',
         figure=fig,
-        style={'width': '300px', 'height' : '500px'}
+        style={'width': '300px', 'height' : '100px', 'padding': '0px'}
     ),
 ])
 
