@@ -19,7 +19,7 @@ df = pd.DataFrame(df)
 
 
 # figure
-fig = px.bar(df, x='gugun_id', y='count', title="자치구별 버스정류장 수")
+fig = px.bar(df, x='gugun_id', y='count', title="자치구별 지하철역 수")
 
 
 # html
