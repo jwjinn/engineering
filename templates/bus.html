@@ -1,4 +1,4 @@
-{%load static %}
+{%load static %}{%load plotly_dash%}
 
 <!DOCTYPE HTML>
 <!--
@@ -50,31 +50,41 @@
 										<article>
 											<header>
 												<h2>버스</h2>
-												<p>Sidebar on the right, content on the left.</p>
+												<p>대중교통의 접근성이 해당지역 인구증감에 영향을 미치고, 인구증감은 향후 학생수에 영향을 미칩니다.
+													따라서 신설학교 학생수 예측을 위한 요소 중 하나로 자치구별 버스정류장수 비교를 위해
+													서울시 버스정류장 데이터를 이용해 자치구별 버스정류장 수를 시각화했습니다. </p>
 											</header>
+											<hr style="border:1px solid gray">
 
-                                            <span class="image featured"><img src="{% static 'images/banner.jpg' %}" alt="" /></span>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam lorem ipsum dolor sit amet nullam.</p>
+                                            <div class="bus_map">
+												<p><b>서울시 버스정류장 위치</b><br>
+													> Plotly Express Scatter Mapbox</p>
+												{% plotly_app name="bus_scatter_map" ratio=0.8 %}
+												<p>📍서울시 버스정류장의 위경도 좌표를 이용해 위치를 산점도로 시각화했습니다.
+												전체적으로 버스정류이 잘 갖춰져 있는 것으로 보입니다. </p>
+											</div>
+											<br><hr style="border:1px solid gray"><br>
 
-											<h3>And Yet Another Subheading</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
-											justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
-											ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
-											vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-											Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-											rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
-											Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
-											Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum commodo luctus.</p>
+											<div class="bus_map2">
+												<p><b>서울시 버스정류장 분포도</b><br>
+													> Plotly Express Choropleth Mapbox</p>
+												{% plotly_app name="bus_choropleth_map" ratio=0.6 %}
+												<p>📍서울시 버스정류장 위경도 좌표와 GeoJson을 이용하여 자치구별 버스정류장의 분포도를 시각화했습니다.
+												<br>📍자치구별로 비교해보았을 때, 서초구는 버스정류장 수가 가장 많고, 중구는 가장 적은 것으로 보이며
+												자치구의 면적과 버스정류장 수가 비례한 것으로 보입니다. </p>
+											</div>
+											<br><hr style="border:1px solid gray"><br>
 
-											<p>Phasellus odio risus, faucibus et viverra vitae, eleifend ac purus. Praesent mattis, enim
-											quis hendrerit porttitor, sapien tortor viverra magna, sit amet rhoncus nisl lacus nec arcu.
-											Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt. Mauris dolor urna,
-											fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium.
-											Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
-											Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.</p>
+											<div class="bus_bar">
+												<p><b>자치구별 버스정류장 수 비교</b><br>
+													> Plotly Express Bar</p>
+												{% plotly_app name="bus_bar" ratio=0.6 %}
+												<p>📍서울시 버스정류장 데이터를 이용하여 자치구별 버스정류장 수를 바 그래프로 시각화했습니다.
+												<br>📍자치구별로 비교해보았을 때, 서초구가 버스정류장 수가 가장 많고, 중구가 가장 적은 것으로 나타납니다.</p>
+											</div>
+
+
+
 										</article>
 
 								</div>
@@ -85,27 +95,24 @@
 									<!-- Sidebar -->
 
 										<section>
-											<h3>Just a Subheading</h3>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis et nisi etiam.</p>
+											<h2>관련 논문</h2>
+											<h3>교통접근성이 인구증감에 미치는 영향요인 연구</h3>
+											<p>해당 논문에서는 교통접근성이 인구증감에 어떠한 영향을 미치는지 밝히는 연구를 진행하였고,
+												교통접근성 향상은 인구 증가에 영향이 있는 것으로 나타났습니다.
+											</p>
 											<footer>
-												<a href="#" class="button">Continue Reading</a>
+												<a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002705837" class="button">논문 바로보기</a>
 											</footer>
 										</section>
 
 										<section>
-											<h3>Another Subheading</h3>
+											<h3>참고 링크</h3>
 											<ul class="links">
-												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-												<li><a href="#">Ornare in hendrerit in lectus</a></li>
-												<li><a href="#">Semper mod quis eget mi dolore</a></li>
-												<li><a href="#">Consequat etiam lorem phasellus</a></li>
-												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-												<li><a href="#">Semper mod quisturpis nisi</a></li>
+												<li><a href="https://www.data.go.kr/data/15067528/fileData.do">공공데이터포털 전국 버스정류장 위치정보</a></li>
+
 											</ul>
 											<footer>
-												<a href="#" class="button">More Random Links</a>
+
 											</footer>
 										</section>
 
