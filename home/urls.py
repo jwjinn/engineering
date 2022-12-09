@@ -1,7 +1,8 @@
 from django.urls import path
 from . import views
 
-from home.dash_apps import app1, app3, app4, app5, app6, app7,APT_heat,APT_meme,APT_bi,edu_bar,edu_pie,edu_sca
+from home.dash_apps import app1, app3,APT_heat,APT_meme,APT_bi,edu_bar,edu_pie,edu_sca
+from home.dash_apps import app1, app3, SchoolMap, SchoolNum, StudentTeacherClass, SchoolHeatMap
 
 urlpatterns = [
     path('', views.index, name = 'index'),
