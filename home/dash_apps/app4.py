@@ -28,7 +28,7 @@ df = pd.DataFrame({'school_name': name, 'latitude': latitude, 'longitude' : long
 
 # school_name 으로 join
 schools = school.merge(df, on='school_name', how='inner')
-print(schools)
+
 schools.columns = ["school_id", "gugun_id", "학교명", "school_level", "학생수",
                    "교사수", "학급당 학생수", "school_address", "latitude", "longitude"]
 # mapbox token set
