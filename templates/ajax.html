@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        function show_eng(){
+            var input_val = document.querySelector('input[name = "input_name"]');
+            console.log(input_val.value);
+
+            $.ajax({
+                url: 'show_eng',
+                type: 'GET',
+                data:{
+                    'input_val': input_val.value
+                },
+                success: function(data){ //data: 비동기 통신으로 들어온.
+                    console.log(data['eng'])
+                    var element=document.getElementById('div_id');
+                    element.innerHTML=data['eng']
+                }
+            });
+        }
+    </script>
+
+
+</head>
+<body>
+    <form method="POST" action = {% url 'ajax' %}>{% csrf_token %}
+        <input type ="text" name = "input_name">
+        <button class = "send_btn" onclick="show_eng()" type="button">전송</button>
+    </form>
+
+<div id = "div_id"></div>
+
+</body>
+</html>
