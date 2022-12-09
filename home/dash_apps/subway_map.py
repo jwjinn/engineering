@@ -29,7 +29,7 @@ lon_list = []
 
 
 # mongo
-mongo = MongoCon('34.64.138.45', 27017)
+mongo = MongoCon('34.64.138.45', 27017, 1000)
 for i in range(0, len(name_list)) :
     location = mongo.findLocation('subway', name_list[i])
     lon_list.append(location[0])

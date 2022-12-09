@@ -3,6 +3,9 @@ from . import views
 
 from home.dash_apps import app1, app3,APT_heat,APT_meme,APT_bi,edu_bar,edu_pie,edu_sca
 from home.dash_apps import app1, app3, SchoolMap, SchoolNum, StudentTeacherClass, SchoolHeatMap
+from home.dash_apps import academy_heatmap, academy_treemap_bar, academy_two_bar
+from home.dash_apps import bus_bar, bus_choropleth_map, bus_scatter_map
+from home.dash_apps import subway_bar, subway_map
 
 urlpatterns = [
     path('', views.index, name = 'index'),
