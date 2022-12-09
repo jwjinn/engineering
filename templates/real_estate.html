@@ -48,72 +48,63 @@
 								<div id="content">
 
 									<!-- Content -->
+									<article>
+										<header>
+											<h2>부동산</h2>
+										</header>
+										<h3 id="c">자치구별 아파트 평균 매매 가격 히트맵</h3>
+										<span class="image featured">
+										{% plotly_app name="APT_heatmap" ratio=0.5 %}
+										</span>
+										<p>자치구별 아파트 매매가에 대해서 한눈에 보기 쉽게 자치구별 위치에 대해서 히트맵으로 표현하였습니다.</p>
+										<br><br><br>
+										
+										<h3 id="a">서울시 아파트 매매가 및 아파트 면적</h3>
+										<span class="image featured">
+											{% plotly_app name="APT" ratio=0.5 %}
+										</span>
+										<p>아파트 실거래 자료를 통해서 자치구로 분류하여, 매매가와 아파트 면적을 구하였습니다.
+											<br> 이를 통해, 강남구와 서초구가 아파트 매매가와 아파트 면적이 높을 것을 확인 할 수 있었습니다.
+										</p>
+										<br><br><br>
 
-										<article>
-											<header>
-												<h2>부동산</h2>
-												<p>Sidebar on the right, content on the left.</p>
-											</header>
+										<h3 id="b">서울시 아파트 평균 매매가와 다양한 요인들의 상관 관계</h3>
+										<span class="image featured">
+											{% plotly_app name="APT_bi" ratio=0.5 %}
+										</span>
+										<p>아파트 매매가와 교육 환경에 영향을 받는 다양한 요인들에 대해서 상관 관계를 알기 위하여 산점도 그래프를 통해 알아보았습니다.
+										<br><br>아파트 면적과 매매가는 상관 관계가 높은 것을 확인 할 수 있었고, 학생수와 교원수는 강남과 서초를 제외하고는 큰 연관관계를 확인 할 수 없었습니다.
+										</p>
 
-                                            <span class="image featured">
-                                                {% plotly_app name="SimpleExample" ratio=0.5 %}
-                                            </span>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam lorem ipsum dolor sit amet nullam.</p>
+										<br><br><br>
+									</article>
 
-											<h3>And Yet Another Subheading</h3>
-                                            <span class="image featured">
-                                                {% plotly_app name="SimpleExample" ratio=0.5 %}
-                                            </span>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam lorem ipsum dolor sit amet nullam.</p>
-
-                                            <h3>And Yet Another Subheading</h3>
-
-                                        <span class="image featured">
-                                            {% plotly_app name="SimpleExample" ratio=0.5 %}
-                                        </span>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam lorem ipsum dolor sit amet nullam.</p>
-										</article>
-
-								</div>
 							</div>
-							<div class="col-4 col-12-narrower">
-								<div id="sidebar">
+						</div>
+						<div class="col-4 col-12-narrower">
+							<div id="sidebar">
+
 
 									<!-- Sidebar -->
 
-										<section>
-											<h3>Just a Subheading</h3>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis et nisi etiam.</p>
-											<footer>
-												<a href="#" class="button">Continue Reading</a>
-											</footer>
-										</section>
+									<section>
+										<h3>관련 논문</h3>
+										<p>교육환경과 주택가격 간 관계와 사회 공간적 격차에 대한 함의 - 서울시의 사례 연구- 저자: 하영주, 이원호
+											<br><br>
+											주택가격(아파트 매매가)과 교육 환경의 연관성에 대한 분석을 위해서 데이터 셋을 구축하였습니다.
 
-										<section>
-											<h3>Another Subheading</h3>
-											<ul class="links">
-												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-												<li><a href="#">Ornare in hendrerit in lectus</a></li>
-												<li><a href="#">Semper mod quis eget mi dolore</a></li>
-												<li><a href="#">Consequat etiam lorem phasellus</a></li>
-												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-												<li><a href="#">Semper mod quisturpis nisi</a></li>
-											</ul>
-											<footer>
-												<a href="#" class="button">More Random Links</a>
-											</footer>
-										</section>
+										</p>
+									</section>
+
+									<section>
+										<h3>링크</h3>
+										<ul class="links">
+											<li><a href="#c">자치구별 아파트 평균 매매 가격 히트맵</a></li>
+											<li><a href="#a">서울시 아파트 매매가 및 아파트 면적</a></li>
+											<li><a href="#b">다양한 요인들의 상관 관계</a></li>
+
+										</ul>
+									</section>
 
 								</div>
 							</div>
