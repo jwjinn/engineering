@@ -48,24 +48,28 @@
 									<!-- Content -->
 
 										<article>
-											<header>
-												<h2>지하철</h2>
-												<p>대중교통의 접근성이 해당지역 인구증감에 영향을 미치고, 인구증감은 향후 학생수에 영향을 미칩니다. 따라서 신설학교 학생수 예측을 위한 요소 중 하나로 자치구별 지하철역수 비교를 위해 수도권 지하철역 데이터를 이용해 자치구별 지하철역 수를 시각화했습니다.</p>
-											</header>
-											<hr style="border:1px solid gray">
+<!--											<header>-->
+<!--												<h2>지하철</h2>-->
+<!--												<p>대중교통의 접근성이 해당지역 인구증감에 영향을 미치고, 인구증감은 향후 학생수에 영향을 미칩니다. 따라서 신설학교 학생수 예측을 위한 요소 중 하나로 자치구별 지하철역수 비교를 위해 수도권 지하철역 데이터를 이용해 자치구별 지하철역 수를 시각화했습니다.</p>-->
+<!--											</header>-->
+<!--											<hr style="border:1px solid gray">-->
 
-                                            <div class="subway_map">
-												<p><b>서울시 지하철역 산점도</b><br>
-													> Plotly Express Scatter Mapbox</p>
+                                            <header>
+												<h2>지하철역 위치</h2>
+												<p>서울시 지하철역 좌표 산점도</p>
+											</header>
+											<div class="subway_map">
 												{% plotly_app name="subway_map" ratio=0.8 %}
 												<p>📍서울시 지하철역의 위경도 좌표 데이터를 이용하여 위치를 산점도로 시각화했습니다.
 												전체적으로 지하철역이 잘 갖춰져 있는 것으로 보입니다.</p>
 											</div>
-											<br><hr style="border:1px solid gray"><br>
+											<br><br><hr style="border:1px solid gray"><br><br>
 
+											<header>
+												<h2>자치구별 지하철역 수</h2>
+												<p>서울시 자치구별 지하철역 수 비교</p>
+											</header>
 											<div class="subway_bar">
-												<p><b>자치구별 지하철역 수</b><br>
-													> Plotly Express Bar</p>
 												{% plotly_app name="subway_bar" ratio=0.6 %}
 												<p>📍서울시 지하철역 데이터를 이용하여 자치구별 지하철역 수를 바 그래프로 시각화했습니다.
 												<br>📍자치구별로 비교해보았을 때, 강남구가 지하철역 수가 가장 많고, 금천구가 가장 적은 것으로 나타납니다.</p>

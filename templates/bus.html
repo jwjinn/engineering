@@ -48,36 +48,42 @@
 									<!-- Content -->
 
 										<article>
-											<header>
-												<h2>버스</h2>
-												<p>대중교통의 접근성이 해당지역 인구증감에 영향을 미치고, 인구증감은 향후 학생수에 영향을 미칩니다.
-													따라서 신설학교 학생수 예측을 위한 요소 중 하나로 자치구별 버스정류장수 비교를 위해
-													서울시 버스정류장 데이터를 이용해 자치구별 버스정류장 수를 시각화했습니다. </p>
-											</header>
-											<hr style="border:1px solid gray">
+<!--											<header>-->
+<!--												<h2>버스</h2>-->
+<!--												<p>대중교통의 접근성이 해당지역 인구증감에 영향을 미치고, 인구증감은 향후 학생수에 영향을 미칩니다.-->
+<!--													따라서 신설학교 학생수 예측을 위한 요소 중 하나로 자치구별 버스정류장수 비교를 위해-->
+<!--													서울시 버스정류장 데이터를 이용해 자치구별 버스정류장 수를 시각화했습니다. </p>-->
+<!--											</header>-->
+<!--											<hr style="border:1px solid gray">-->
 
-                                            <div class="bus_map">
-												<p><b>서울시 버스정류장 위치</b><br>
-													> Plotly Express Scatter Mapbox</p>
+                                            <header>
+												<h2>버스정류장 위치</h2>
+												<p>서울시 버스정류장 좌표 산점도</p>
+											</header>
+											<div class="bus_map">
 												{% plotly_app name="bus_scatter_map" ratio=0.8 %}
 												<p>📍서울시 버스정류장의 위경도 좌표를 이용해 위치를 산점도로 시각화했습니다.
-												전체적으로 버스정류이 잘 갖춰져 있는 것으로 보입니다. </p>
+												전체적으로 버스정류장이 잘 갖춰져 있는 것으로 보입니다. </p>
 											</div>
-											<br><hr style="border:1px solid gray"><br>
+											<br><br><hr style="border:1px solid gray"><br><br>
 
+											<header>
+												<h2>버스정류장 분포도</h2>
+												<p>서울시 자치구별 버스정류장 분포도 비교</p>
+											</header>
 											<div class="bus_map2">
-												<p><b>서울시 버스정류장 분포도</b><br>
-													> Plotly Express Choropleth Mapbox</p>
 												{% plotly_app name="bus_choropleth_map" ratio=0.6 %}
 												<p>📍서울시 버스정류장 위경도 좌표와 GeoJson을 이용하여 자치구별 버스정류장의 분포도를 시각화했습니다.
 												<br>📍자치구별로 비교해보았을 때, 서초구는 버스정류장 수가 가장 많고, 중구는 가장 적은 것으로 보이며
 												자치구의 면적과 버스정류장 수가 비례한 것으로 보입니다. </p>
 											</div>
-											<br><hr style="border:1px solid gray"><br>
+											<br><br><hr style="border:1px solid gray"><br><br>
 
+											<header>
+												<h2>자치구별 버스정류장 수</h2>
+												<p>서울시 자치구별 버스정류장 수 비교</p>
+											</header>
 											<div class="bus_bar">
-												<p><b>자치구별 버스정류장 수 비교</b><br>
-													> Plotly Express Bar</p>
 												{% plotly_app name="bus_bar" ratio=0.6 %}
 												<p>📍서울시 버스정류장 데이터를 이용하여 자치구별 버스정류장 수를 바 그래프로 시각화했습니다.
 												<br>📍자치구별로 비교해보았을 때, 서초구가 버스정류장 수가 가장 많고, 중구가 가장 적은 것으로 나타납니다.</p>

@@ -55,48 +55,36 @@
 											<header>
 												<h2 id = a>서울시 학교 현황</h2>
 												<p>서울시 초중고 학교 현황, 위치</p>
-												<div>{% plotly_app name="school_map" ratio=0.7 %}
-													서울시에 있는 초등학교, 중학교, 고등학교의 위치를 표시합니다.
-													마우스를 그래프위에 올리면 학교명, 학생수, 교사수, 학급당 학생수 정보를 확인할 수 있습니다.</div>
+												<div>{% plotly_app name="school_map" ratio=0.8 %}
+													📍서울시에 있는 초등학교, 중학교, 고등학교의 위치를 표시합니다.
+													📍마우스를 그래프위에 올리면 학교명, 학생수, 교사수, 학급당 학생수 정보를 확인할 수 있습니다.</div>
 
 											</header>
-											<br>
-											<br>
-											<br>
-											<br>
-											<br>
+											<br><br><hr style="border:1px solid gray"><br><br>
 											<header>
 												<h2 id = b>자치구별 학교수</h2>
 												<p>서울시의 자치구별 초중고 학교수</p>
-												<div>{% plotly_app name="school_num" ratio=0.6 %}
-													서울시 각 자치구에 있는 학교수를 학교급(초등학교, 중학교, 고등학교)에 따라 표시합니다.
-													각 학교급별로 지자체별 학교수를 비교해볼 수 있습니다. </div>
+												<div>{% plotly_app name="school_num" ratio=0.7 %}
+													📍서울시 각 자치구에 있는 학교수를 학교급(초등학교, 중학교, 고등학교)에 따라 표시합니다.
+													📍각 학교급별로 지자체별 학교수를 비교해볼 수 있습니다. </div>
 											</header>
-											<br>
-											<br>
-											<br>
-											<br>
-											<br>
+											<br><br><hr style="border:1px solid gray"><br><br>
 											<header>
 												<h2 id = c>자치구별 학생수, 교사수, 과밀학급수</h2>
 												<p>자치구별 총 학생수, 총 교사수, 과밀학급수 비교</p>
 												<h6>*과밀학급 : 학급당 학생수가 28명이 넘는 학급</h6>
 												<div>{% plotly_app name="student_teacher_class" ratio=0.6 %}
-													서울시의 자치구별 총 학생수, 총 교사수, 과밀학급수를 비교합니다.
-													총 학생수 그래프와 총 교사수 그래프는 비슷한 분포를 보이지만,
+													📍서울시의 자치구별 총 학생수, 총 교사수, 과밀학급수를 비교합니다.
+													📍총 학생수 그래프와 총 교사수 그래프는 비슷한 분포를 보이지만,
 													과밀학급수 그래프를 보면 강남구에 몰려있는 것을 확인할 수 있습니다.</div>
 											</header>
-											<br>
-											<br>
-											<br>
-											<br>
-											<br>
+											<br><br><hr style="border:1px solid gray"><br><br>
 											<header>
 												<h2 id = d>자치구별 학생수 영향요인 시각화</h2>
 												<p>서울시의 자치구별 평균 학생수를 인구수, 평균 아파트 매매가, 버스정류장수, 지하철역수, 학원수와 비교</p>
 												<div>{% plotly_app name="school_heatmap" ratio=0.6%}
-													학생수에 영향을 줄 수 있는 요인들을 비교합니다.
-													각각의 분포도를 비교해보면 학생수와 여러 요인들과의 상관관계를 확인해볼 수 있습니다.</div>
+													📍학생수에 영향을 줄 수 있는 요인들을 비교합니다.
+													📍각각의 분포도를 비교해보면 학생수와 여러 요인들과의 상관관계를 확인해볼 수 있습니다.</div>
 											</header>
 
 										</article>
@@ -109,15 +97,14 @@
 									<!-- Sidebar -->
 
 
-										<section>
-											<h2>관련 논문</h2>
-											<h3>윤용기 2018 "적정규모 학교 정책수립을 위한 우리나라 초등학교 학생수와 학급수에 관한 기초 연구 I
-												- 경상남도 17개 시군을 중심으로 -" 교육녹색환경연구 = The journal of Sustainable Design and Educational Environment Research, 17(3): 54~64</h3>
-											<p>논문을 참고하여 지자체별 서울시 학교의 학교급별 학교수, 학생수, 교사수, 학급수 등을 조사하여 비교했습니다.</p>
-											<footer>
-												<a href="https://scienceon.kisti.re.kr/commons/util/originalView.do?cn=JAKO201811562301375&oCn=JAKO201811562301375&dbt=JAKO&journal=NJOU00567201"
-												   class="button">논문 바로보기</a>
-											</footer>
+										<section id = 'fix'>
+											<h3><a href="#">학교</a></h3>
+											<ul class="links">
+												<li><a href="#a">> 서울시 학교 현황</a></li>
+												<li><a href="#b">> 자치구별 학교수</a></li>
+												<li><a href="#c">> 자치구별 학생수, 교사수, 과밀학급수</a></li>
+												<li><a href="#d">> 자치구별 학생수 영향요인 시각화</a></li>
+											</ul>
 										</section>
 
 
@@ -136,7 +123,7 @@
 
 				</div>
 
-		</div>
+
 
 		<!-- Scripts -->
 			<script src="{% static 'js/jquery.min.js' %}"></script>
