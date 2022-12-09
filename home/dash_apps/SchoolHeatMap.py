@@ -74,7 +74,7 @@ df_s = pd.DataFrame({'gugun' : gugun, 'student': mean_student, 'bus' : count_bus
                      'academy' : count_academy, 'real_estate_price' : mean_price, 'population': seoul_info['population']})
 
 
-# subplot 만들기 (2, 3)
+# subplot 만들기 (row:2, col:3)
 fig = make_subplots(
     rows=2, cols=3, subplot_titles=['평균 학생수', '인구수', '부동산 거래가 평균', '버스정류장수', '지하철역수', '학원수' ],
     specs=[[{"type": "mapbox"}, {"type": "mapbox"}, {"type": "mapbox"}],
