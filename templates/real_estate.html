@@ -50,33 +50,39 @@
 									<!-- Content -->
 									<article>
 										<header>
-											<h2>부동산</h2>
+											<h2 id="c">평균 매매가격</h2>
+											<p>자치구별 아파트 평균 매매 가격 비교</p>
 										</header>
-										<h3 id="c">자치구별 아파트 평균 매매 가격 히트맵</h3>
 										<span class="image featured">
-										{% plotly_app name="APT_heatmap" ratio=0.5 %}
+										{% plotly_app name="APT_heatmap" ratio=0.55 %}
 										</span>
-										<p>자치구별 아파트 매매가에 대해서 한눈에 보기 쉽게 자치구별 위치에 대해서 히트맵으로 표현하였습니다.</p>
-										<br><br><br>
-										
-										<h3 id="a">서울시 아파트 매매가 및 아파트 면적</h3>
+										<p>📍자치구별 아파트 매매가에 대해서 한눈에 보기 쉽게 자치구별 위치에 대해서 히트맵으로 표현하였습니다.</p>
+										<br><br><hr style="border:1px solid gray"><br><br>
+
+										<header>
+											<h2 id="a">매매가와 면적</h2>
+											<p>서울시 아파트 매매가 및 아파트 면적 비교</p>
+										</header>
 										<span class="image featured">
-											{% plotly_app name="APT" ratio=0.5 %}
+											{% plotly_app name="APT" ratio=0.55 %}
 										</span>
-										<p>아파트 실거래 자료를 통해서 자치구로 분류하여, 매매가와 아파트 면적을 구하였습니다.
+										<p>📍아파트 실거래 자료를 통해서 자치구로 분류하여, 매매가와 아파트 면적을 구하였습니다.
 											<br> 이를 통해, 강남구와 서초구가 아파트 매매가와 아파트 면적이 높을 것을 확인 할 수 있었습니다.
 										</p>
-										<br><br><br>
+										<br><br><hr style="border:1px solid gray"><br><br>
 
-										<h3 id="b">서울시 아파트 평균 매매가와 다양한 요인들의 상관 관계</h3>
+										<header>
+											<h2 id="b">평균 매매가 상관 관계</h2>
+											<p>서울시 아파트 평균 매매가와 다양한 요인들의 상관 관계</p>
+										</header>
 										<span class="image featured">
-											{% plotly_app name="APT_bi" ratio=0.5 %}
+											{% plotly_app name="APT_bi" ratio=0.55 %}
 										</span>
-										<p>아파트 매매가와 교육 환경에 영향을 받는 다양한 요인들에 대해서 상관 관계를 알기 위하여 산점도 그래프를 통해 알아보았습니다.
-										<br><br>아파트 면적과 매매가는 상관 관계가 높은 것을 확인 할 수 있었고, 학생수와 교원수는 강남과 서초를 제외하고는 큰 연관관계를 확인 할 수 없었습니다.
+										<p>📍아파트 매매가와 교육 환경에 영향을 받는 다양한 요인들에 대해서 상관 관계를 알기 위하여 산점도 그래프를 통해 알아보았습니다.
+										<br><br>📍아파트 면적과 매매가는 상관 관계가 높은 것을 확인 할 수 있었고, 학생수와 교원수는 강남과 서초를 제외하고는 큰 연관관계를 확인 할 수 없었습니다.
 										</p>
 
-										<br><br><br>
+
 									</article>
 
 							</div>
