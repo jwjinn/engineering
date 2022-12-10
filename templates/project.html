@@ -1,0 +1,159 @@
+{%load static %}
+{%load plotly_dash %}
+
+
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>프로젝트 계획</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link href = "{% static 'css/main.css' %}" rel = "stylesheet"/>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Logo -->
+						<h1>수도권 신설 학교를 위한 학생수 예측 데이터 셋</h1>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+                                <li><a href="{% url 'index' %}">Home</a></li>
+                                <li><a href="{% url 'map' %}">map</a></li>
+                                <li><a href="{% url 'academy' %}">학원</a></li>
+								<li><a href="{% url 'real_estate' %}">부동산</a></li>
+								<li><a href="{% url 'school' %}">학교</a></li>
+								<li><a href="{% url 'bus' %}">버스</a></li>
+								<li><a href="{% url 'subway' %}">지하철</a></li>
+                                <li><a href="{% url 'education_budget' %}">교육예산</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Main -->
+				<section class="wrapper style1">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-8 col-12-narrower">
+								<div id="content">
+
+									<!-- Content -->
+									<article>
+										<header>
+											<h2 id="c">프로젝트 기획서</h2>
+											<p>프로젝트 초기 기획을 볼 수 있으며, 어떻게 계획이 변해 왔는 지 알 수 있습니다.</p>
+										</header>
+										<span class="image featured">
+										<iframe src="https://onedrive.live.com/embed?cid=0612B8196EC04E8B&resid=612B8196EC04E8B%219260&authkey=AJwou5-kN24psgI&em=2" width="950" height="900" frameborder="0" scrolling="no"></iframe>
+										</span>
+                                        <h3>기획 방향의 변화</h3>
+										<p>1. 서울시, 경기도 학군 비교에서 서울시로 범위를 한정<br>
+                                            - 데이터량이 너무 많고, 물리적인 수집 시간이 길다.
+                                        </p>
+
+                                        <p>2. 신설학교와 폐교량 비교 수집 안함<br>
+                                            - 연구 된 사례도 없어서, 계획을 미뤘고 여유 시간이 충분하지 않아, 계획 폐기.
+                                        </p>
+
+										<br><br><hr style="border:1px solid gray"><br><br>
+
+										<header>
+											<h2 id="a">WBS</h2>
+											<p>초기 계획과 실제 과정을 비교할 수 있습니다.</p>
+										</header>
+										<span class="image featured">
+<iframe src="https://onedrive.live.com/embed?cid=0612B8196EC04E8B&resid=612B8196EC04E8B%219263&authkey=AI0dMXZ-AivhurM&em=2" width="950" height="900" frameborder="0" scrolling="no"></iframe>
+										</span>
+                                        <h3>WBS 계획 변화의 원인</h3>
+										<p>1. 디비 적재<br>
+                                            - 하루를 잡은 이유가 전처리가 완료가 되면, 그냥 적재를 하면 끝 이라고 판단했다.<br>
+                                            - 그러나, 2 ~ 3일 정도 걸렸다.
+                                        </p>
+
+                                        <p>2. 테스트<br>
+                                            - 깃으로 단위 테스트를 진행했다. 각자의 결과물이 나오기 시작한 12월 8일부터 사용.
+
+                                        </p>
+
+                                        <p>3. 발표 준비<br>
+                                            - 지금 이 글을 작성하고 있는 시간이 12월 10일 23:34분
+                                        </p>
+										<br><br><hr style="border:1px solid gray"><br><br>
+
+										<header>
+											<h2 id="b">WireFrame</h2>
+											<p>초기에 계획했던 시각화 계획과 결과물을 비교할 수 있습니다.</p>
+										</header>
+										<span class="image featured">
+											<h3>기존의 와이어 프레임과는 다르게 진행</h3>
+                                            <p>제한된 시간 중에, 웹에 투자하는 시간을 줄여야 한다.<br>
+                                            각자 작업할 수 있는 html을 할당을 줄거니, 어떻게 시각화 할지 알려줘라.
+                                            </p>
+										</span>
+										                            <h3>초기 시각화 구상 - notion</h3>
+										<p><a href="subwayBusPrivate/">신정연</a>
+
+                                        </p>
+
+                                        <p><a href="jeong/">정수영</a>
+
+                                        </p>
+
+                                        <p><a href="lee/">이경선</a>
+                                        </p>
+										</p>
+
+
+									</article>
+
+							</div>
+						</div>
+						<div class="col-4 col-12-narrower">
+							<div id="sidebar">
+
+
+
+
+									<section>
+										<h3>바로가기</h3>
+										<ul class="links">
+											<li><a href="#c">프로젝트 기획서</a></li>
+											<li><a href="#a">WBS</a></li>
+											<li><a href="#b">WireFrame</a></li>
+
+										</ul>
+									</section>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'js/jquery.min.js' %}"></script>
+            <script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+            <script src="{% static 'js/browser.min.js' %}"></script>
+            <script src="{% static 'js/breakpoints.min.js' %}"></script>
+            <script src="{% static 'js/util.js' %}"></script>
+            <script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>

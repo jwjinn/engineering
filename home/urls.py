@@ -19,6 +19,14 @@ urlpatterns = [
     path('map/', views.map, name = 'map'),
     path('map/geoInfo', views.geoInfo, name = 'geoInfo'),
 
+    path('projectPlan/', views.projectPlan, name = 'projectPlan'),
+
+    #notion_wireFrmae
+    path('projectPlan/subwayBusPrivate/', views.subwaybusprivate, name = 'subwayBusPrivate'),
+    path('projectPlan/jeong/', views.jeong, name = 'jeong'),
+    path('projectPlan/lee/', views.lee, name = 'lee'),
+
+
 
     # 추후 삭제할 것.
     # ajax map praictice

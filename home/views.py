@@ -1,4 +1,5 @@
 import json
+import os.path
 
 from django.shortcuts import render
 
@@ -184,3 +185,17 @@ def geoInfo(request):
 
     except UnboundLocalError as e:
         print("unbound")
+
+def projectPlan(request):
+    return render(request, 'project.html')
+
+
+# notion_wireFrame
+def subwaybusprivate(request):
+    return render(request, 'subwaybusprivate.html')
+
+def jeong(request):
+    return render(request, 'jeong.html')
+
+def lee(request):
+    return render(request, 'lee.html')
