@@ -60,7 +60,7 @@
 												<h2>버스정류장 위치</h2>
 												<p>서울시 버스정류장 좌표 산점도</p>
 											</header>
-											<div class="bus_map">
+											<div class="bus_map" id="a">
 												{% plotly_app name="bus_scatter_map" ratio=0.8 %}
 												<p>📍서울시 버스정류장의 위경도 좌표를 이용해 위치를 산점도로 시각화했습니다.
 												전체적으로 버스정류장이 잘 갖춰져 있는 것으로 보입니다. </p>
@@ -71,7 +71,7 @@
 												<h2>버스정류장 분포도</h2>
 												<p>서울시 자치구별 버스정류장 분포도 비교</p>
 											</header>
-											<div class="bus_map2">
+											<div class="bus_map2" id="b">
 												{% plotly_app name="bus_choropleth_map" ratio=0.6 %}
 												<p>📍서울시 버스정류장 위경도 좌표와 GeoJson을 이용하여 자치구별 버스정류장의 분포도를 시각화했습니다.
 												<br>📍자치구별로 비교해보았을 때, 서초구는 버스정류장 수가 가장 많고, 중구는 가장 적은 것으로 보이며
@@ -83,7 +83,7 @@
 												<h2>자치구별 버스정류장 수</h2>
 												<p>서울시 자치구별 버스정류장 수 비교</p>
 											</header>
-											<div class="bus_bar">
+											<div class="bus_bar" id="c">
 												{% plotly_app name="bus_bar" ratio=0.6 %}
 												<p>📍서울시 버스정류장 데이터를 이용하여 자치구별 버스정류장 수를 바 그래프로 시각화했습니다.
 												<br>📍자치구별로 비교해보았을 때, 서초구가 버스정류장 수가 가장 많고, 중구가 가장 적은 것으로 나타납니다.</p>
@@ -109,17 +109,13 @@
 											<footer>
 												<a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002705837" class="button">논문 바로보기</a>
 											</footer>
-										</section>
 
-										<section>
-											<h3>참고 링크</h3>
+											<h3><a href="#">목록</a></h3>
 											<ul class="links">
-												<li><a href="https://www.data.go.kr/data/15067528/fileData.do">공공데이터포털 전국 버스정류장 위치정보</a></li>
-
+												<li><a href="#a">> 버스정류장 위치</a></li>
+												<li><a href="#b">> 버스정류장 분포도</a></li>
+												<li><a href="#c">> 자치구별 버스정류장 수</a></li>
 											</ul>
-											<footer>
-
-											</footer>
 										</section>
 
 								</div>
