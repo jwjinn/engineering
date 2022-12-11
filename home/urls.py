@@ -1,8 +1,8 @@
 from django.urls import path
 from . import views
 
-from home.dash_apps import app1, app3,APT_heat,APT_meme,APT_bi,edu_bar,edu_pie,edu_sca
-from home.dash_apps import app1, app3, SchoolMap, SchoolNum, StudentTeacherClass, SchoolHeatMap
+from home.dash_apps import APT_heat,APT_meme,APT_bi,edu_bar,edu_pie,edu_sca
+from home.dash_apps import SchoolMap, SchoolNum, StudentTeacherClass, SchoolHeatMap
 from home.dash_apps import academy_heatmap, academy_treemap_bar, academy_two_bar
 from home.dash_apps import bus_bar, bus_choropleth_map, bus_scatter_map
 from home.dash_apps import subway_bar, subway_map
@@ -26,11 +26,22 @@ urlpatterns = [
     path('projectPlan/jeong/', views.jeong, name = 'jeong'),
     path('projectPlan/lee/', views.lee, name = 'lee'),
 
+    # ERD
+    path('erd/', views.erd, name = 'erd'),
+
+    # DataDefinition
+    path('dataDefinition/', views.dataDefinition, name = 'dataDefinition'),
+
+    #tableDefinition
+    path('tableDefinition/', views.tableDefinition, name = 'tableDefinition'),
+
+    #architecture
+    path('architecture/', views.architecture, name = 'architecture'),
+
 
 
     # 추후 삭제할 것.
     # ajax map praictice
-    path('mapractice/', views.mapractice, name = 'mapractice'),
     path('mapractice/geoInfo', views.geoInfo, name = 'geoInfo'),
 
     # ajax priactice

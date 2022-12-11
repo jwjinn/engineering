@@ -1,0 +1,120 @@
+{%load static %}
+
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>architecture</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link href = "{% static 'css/main.css' %}" rel = "stylesheet"/>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Logo -->
+						<h1>수도권 신설 학교를 위한 학생수 예측 데이터 셋</h1>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+                                <li><a href="{% url 'index' %}">Home</a></li>
+                                <li><a href="{% url 'map' %}">map</a></li>
+                                <li><a href="{% url 'academy' %}">학원</a></li>
+								<li><a href="{% url 'real_estate' %}">부동산</a></li>
+								<li><a href="{% url 'school' %}">학교</a></li>
+								<li><a href="{% url 'bus' %}">버스</a></li>
+								<li><a href="{% url 'subway' %}">지하철</a></li>
+                                <li><a href="{% url 'education_budget' %}">교육예산</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Main -->
+				<section class="wrapper style1">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-8 col-12-narrower">
+								<div id="content">
+
+									<!-- Content -->
+									<article>
+										<header>
+											<h2 id="c">architecture 정의서</h2>
+											<p>시스템 구성을 파악할 수 있습니다.</p>
+										</header>
+										<span class="image featured">
+										   <img src="{% static 'images/architecture.png' %}" width="950" height="600">
+										</span>
+
+
+										<h3>AWS에서 Google Cloud로 변경</h3>
+										<p>1. 제한된 시간과 권한, 삭제해도 다시 복구되는 프로그램들<br>
+                                        </p>
+
+                                        <p>2. 적재 속도 문제를 겪음.<br>
+                                        </p>
+
+                                        <h3>Spark Hadoop</h3>
+										<p>master 인스턴스와 worker01 인스턴스 간의 hadoop상에서 분산 처리가 되도록 설계했다.<br>
+                                        </p>
+
+
+                                        <h3>Django</h3>
+										<p> - models.py 뿐만 아니라, 비동기 통신을 위한 DB 통신용 모듈 구현.<br>
+                                            - pymongo를 이용한 mongoDB 통신용 모듈 구현.
+                                        </p>
+
+
+										<br><br><hr style="border:1px solid gray"><br><br>
+
+
+									</article>
+
+							</div>
+						</div>
+						<div class="col-4 col-12-narrower">
+							<div id="sidebar">
+
+
+
+
+									<section>
+										<h3>바로가기</h3>
+										<ul class="links">
+											<li><a href="#c">아키텍쳐 정의서</a></li>
+
+										</ul>
+									</section>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'js/jquery.min.js' %}"></script>
+            <script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+            <script src="{% static 'js/browser.min.js' %}"></script>
+            <script src="{% static 'js/breakpoints.min.js' %}"></script>
+            <script src="{% static 'js/util.js' %}"></script>
+            <script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>

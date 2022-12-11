@@ -43,8 +43,6 @@ def subway(request):
 def map(request):
     return render(request, 'map.html')
 
-def mapractice(request):
-    return render(request, 'mapractice.html')
 
 def ajax(request):
     return render(request, 'ajax.html')
@@ -199,3 +197,16 @@ def jeong(request):
 
 def lee(request):
     return render(request, 'lee.html')
+
+# ERD
+def erd(request):
+    return render(request, 'erd.html')
+
+def dataDefinition(request):
+    return render(request, 'dataDefinition.html')
+
+def tableDefinition(request):
+    return render(request, 'tableDefinition.html')
+
+def architecture(request):
+    return render(request, 'architecture.html')
