@@ -48,25 +48,36 @@
 
 									<!-- Content -->
 									<article>
-										<header>
-											<h2>교육 예산</h2>
-										</header>
+<!--										<header>-->
+<!--											<h2>교육 예산</h2>-->
+<!--										</header>-->
 
-										<h3 id="a">자치구별 교육관련 예산</h3>
+										<header>
+										<h2 id="a">교육 관련 예산</h2>
+										<p>자치구별 교육예산 비교</p>
+										</header>
 										<span class="image featured">
 										{% plotly_app name="edu" ratio=0.5 %}
 										</span>
 										<p>자치구별 교육예산에 대해서 데이터를 구축하였습니다.</p>
+										<br><br><hr style="border:1px solid gray"><br><br>
 
-										<h3 id="b">교육 예산 종류</h3>
+										<header>
+										<h2 id="b">교육 예산 종류</h2>
+										<p>교육예산의 세부분류 비교</p>
+										</header>
 										<span class="image featured">
 										{% plotly_app name="edu03" ratio=0.5 %}
 										</span>
 										<p>교육예산 중 대부분이 급식비를 차지 한다는 것을 확인하였습니다.
 											<br> 또한, 강남구의 교육 시설 개선을 위한 비용이 상당히 높은 것을 확인할 수 있습니다.
 										</p>
+										<br><br><hr style="border:1px solid gray"><br><br>
 
-										<h3 id="c">교육 예산과 다양한 요인 비교</h3>
+										<header>
+										<h2 id="c">교육 예산과 다양한 요인 비교</h2>
+										<p>교육 예산 상관관계</p>
+										</header>
 										{% plotly_app name="edu02" ratio=0.5 %}
 										<p>교육예산과 다양한 요인을 비교 하였고, 인구 수만 유의미한 상관 관계가 있는 것을 확인할 수 있습니다. </p>
 									</article>
@@ -89,14 +100,11 @@
 												<a href="https://scienceon.kisti.re.kr/commons/util/originalView.do?cn=JAKO201721565869790&oCn=JAKO201721565869790&dbt=JAKO&journal=NJOU00567201" class="button">논문 바로보기</a>
 											</footer>
 
-										</section>
-
-										<section>
-											<h3>링크</h3>
+											<h3><a href="#">목록</a></h3>
 											<ul class="links">
-												<li><a href="#a">자치구별 교육관련 예산</a></li>
-												<li><a href="#b">종류별 교육 예산 현황</a></li>
-												<li><a href="#c">교육 예산과 다양한 요인 비교</a></li>
+												<li><a href="#a">> 교육 관련 예산</a></li>
+												<li><a href="#b">> 교육 예산 종류</a></li>
+												<li><a href="#c">> 교육 예산 상관관계</a></li>
 											</ul>
 
 										</section>
